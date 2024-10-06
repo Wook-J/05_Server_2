@@ -48,8 +48,8 @@
 				<tr>
 					<th>${vs.count}</th>
 					<td>${book.title}</td> <%-- vs.current.title 도 가능 --%>
-					<td>${book.writer}</td>
-					<td>${book.price}</td>
+					<td>${book.writer}</td> <%-- Book 클래스에 있는 title, writer, price 를 --%>
+					<td>${book.price}</td>	<%-- 이렇게 불러와도 땡겨올 수 있음..!(getter 인건가..) --%>
 				</tr>
 				
 				<%-- 3배수 번째 반복 시 사이에 회색의 여백 만들기 --%>
