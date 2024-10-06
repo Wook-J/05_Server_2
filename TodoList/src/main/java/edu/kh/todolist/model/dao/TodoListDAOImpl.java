@@ -15,10 +15,10 @@ public class TodoListDAOImpl implements TodoListDAO{
 	// 필드
 	private final String FILE_PATH ="/servlet_todoList_data/TodoList.dat";	// 경로지정
 									// (위치) C:/servlet_todoList_data/TodoList.dat
+	private List<Todo> todoList = null;
+	
 	private ObjectOutputStream oos = null;		// 객체 출력용 스트림
 	private ObjectInputStream ois = null;		// 객체 입력용 스트림
-	
-	private List<Todo> todoList = null;
 	
 	// 생성자
 	public TodoListDAOImpl() throws Exception{
@@ -66,7 +66,7 @@ public class TodoListDAOImpl implements TodoListDAO{
 	@Override
 	public int todoAdd(Todo todo) throws Exception{
 		
-		if(todoList.add(todo)){				// Todo 객체 파일 추가 성공 시
+		if(todoList.add(todo)){				// Todo 객체 파일 추가 성공 시 true 반환
 			saveFile();						// 외부파일로 출력
 			return todoList.size() - 1;		// 마지막 인덱스 번호 반환
 		}

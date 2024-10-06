@@ -17,7 +17,7 @@ public class TodoAddServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		/* 할 일 추가 -> 파일에 입력 받은 데이터를 저장 */
-		try {
+		try {		// 모든 예외는 컨트롤러로 던지기
 			
 			// 1. TodoListServiceImpl 객체 생성
 			TodoListService service = new TodoListServiceImpl();

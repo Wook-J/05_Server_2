@@ -15,6 +15,7 @@ public class TodoListServiceImpl implements TodoListService {
 	public TodoListServiceImpl() throws Exception{
 		// TodoListServiceImpl 객체 생성 시 TodoListDAO 객체 생성
 		dao = new TodoListDAOImpl();	// TodoListDAO dao = new TodoListDAOImpl();
+										// 부모타입 참조변수에 자식객체를 넣어둔 형태!
 	}
 
 	// 메서드

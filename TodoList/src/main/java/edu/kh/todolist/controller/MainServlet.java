@@ -42,7 +42,7 @@ public class MainServlet extends HttpServlet{
 			req.setAttribute("todoList", todoList);
 			
 			// 메인페이지 응답을 담당하는 jsp 에 요청 위임
-			String path = "WEB-INF/views/main.jsp";
+			String path = "/WEB-INF/views/main.jsp";
 			req.getRequestDispatcher(path).forward(req, resp);
 			
 		} catch (Exception e) {

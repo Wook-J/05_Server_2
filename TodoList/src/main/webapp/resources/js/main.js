@@ -1,6 +1,6 @@
 /* 제목이 작성되지 않은 경우 form 태그 제출 막기 */
 const addForm = document.querySelector("#addForm");     // form 태그
-const title = document.querySelector("[name=title]");   // 제목 input 태그
+const title = document.querySelector("[name=title]");   // 제목 input 태그 (일반속성 선택자)
 
 // addForm 이 제출될 때
 addForm.addEventListener("submit", (e) => {             // e : 이벤트 객체
